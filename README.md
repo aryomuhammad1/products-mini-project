@@ -51,8 +51,8 @@ db.json # Mock backend data
 1. Clone the repo:
 
    ```bash
-   git clone <repo-url>
-   cd <repo-folder>
+   git clone [<repo-url>](https://github.com/aryomuhammad1/products-mini-project.git)
+   cd [<repo-folder>](https://github.com/aryomuhammad1/products-mini-project.git)
    ```
 
 2. Install dependencies:
