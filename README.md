@@ -57,10 +57,11 @@ db.json # Mock backend data
 
 2. Install dependencies:
    
- ```bash
+   ```bash
    npm install
    ```
-3. Start the mock backend with json-server:
+   
+4. Start the mock backend with json-server:
    
     ```bash
      npx json-server --watch db.json --port 3001
@@ -70,12 +71,12 @@ db.json # Mock backend data
    - http://localhost:3001/products
    - Supports pagination via _limit and _page query params
 
-4. Start the Vite dev server
-
- ```bash
+5. Start the Vite dev server
+   
+   ```bash
    npm run dev
    ```
+   
 Open your browser at : http://localhost:5173
 
-
-
+Notes: ⚠️ We do not use a separate endpoint for item counts, though that’s considered a more ideal architecture.
