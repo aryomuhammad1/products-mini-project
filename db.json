@@ -1,0 +1,118 @@
+{
+  "brands": [
+    { "id": "nike", "name": "Nike" },
+    { "id": "adidas", "name": "Adidas" },
+    { "id": "puma", "name": "Puma" },
+    { "id": "reebok", "name": "Reebok" },
+    { "id": "asics", "name": "Asics" },
+    { "id": "new-balance", "name": "New Balance" },
+    { "id": "under-armour", "name": "Under Armour" },
+    { "id": "converse", "name": "Converse" },
+    { "id": "vans", "name": "Vans" },
+    { "id": "fila", "name": "Fila" },
+    { "id": "skechers", "name": "Skechers" },
+    { "id": "brooks", "name": "Brooks" }
+  ],
+  "products": [
+    { "id": "101", "brandId": "nike", "name": "Nike Air Max" },
+    { "id": "102", "brandId": "nike", "name": "Nike Pegasus" },
+    { "id": "201", "brandId": "adidas", "name": "Adidas Ultraboost" },
+    { "id": "202", "brandId": "adidas", "name": "Adidas Gazelle" },
+    { "id": "301", "brandId": "puma", "name": "Puma RS-X" },
+    { "id": "401", "brandId": "reebok", "name": "Reebok Classic" },
+    { "id": "501", "brandId": "asics", "name": "ASICS Gel-Kayano" },
+    { "id": "601", "brandId": "new-balance", "name": "New Balance 990" },
+    { "id": "701", "brandId": "under-armour", "name": "UA HOVR" },
+    { "id": "801", "brandId": "converse", "name": "Converse Chuck Taylor" },
+    { "id": "901", "brandId": "vans", "name": "Vans Old Skool" },
+    { "id": "1001", "brandId": "fila", "name": "Fila Disruptor" },
+    { "id": "1101", "brandId": "skechers", "name": "Skechers D'Lites" },
+    { "id": "1201", "brandId": "brooks", "name": "Brooks Ghost 14" }
+  ],
+  "productDetails": [
+    {
+      "id": "101",
+      "productId": "101",
+      "description": "Nike Air Max running shoes with max comfort.",
+      "price": 149.99
+    },
+    {
+      "id": "102",
+      "productId": "102",
+      "description": "Nike Pegasus for everyday training.",
+      "price": 129.99
+    },
+    {
+      "id": "201",
+      "productId": "201",
+      "description": "Ultraboost with responsive Boost midsole.",
+      "price": 180.0
+    },
+    {
+      "id": "202",
+      "productId": "202",
+      "description": "Classic Adidas Gazelle suede sneakers.",
+      "price": 95.0
+    },
+    {
+      "id": "301",
+      "productId": "301",
+      "description": "Puma RS-X with bold street style.",
+      "price": 110.0
+    },
+    {
+      "id": "401",
+      "productId": "401",
+      "description": "Reebok Classic for everyday comfort.",
+      "price": 75.0
+    },
+    {
+      "id": "501",
+      "productId": "501",
+      "description": "ASICS Gel-Kayano for stability and support.",
+      "price": 160.0
+    },
+    {
+      "id": "601",
+      "productId": "601",
+      "description": "New Balance 990 premium running shoe.",
+      "price": 175.0
+    },
+    {
+      "id": "701",
+      "productId": "701",
+      "description": "Under Armour HOVR cushioning and energy return.",
+      "price": 140.0
+    },
+    {
+      "id": "801",
+      "productId": "801",
+      "description": "Converse Chuck Taylor classic canvas sneaker.",
+      "price": 60.0
+    },
+    {
+      "id": "901",
+      "productId": "901",
+      "description": "Vans Old Skool with iconic side stripe.",
+      "price": 70.0
+    },
+    {
+      "id": "1001",
+      "productId": "1001",
+      "description": "Fila Disruptor with chunky retro style.",
+      "price": 85.0
+    },
+    {
+      "id": "1101",
+      "productId": "1101",
+      "description": "Skechers D'Lites memory foam sneaker.",
+      "price": 65.0
+    },
+    {
+      "id": "1201",
+      "productId": "1201",
+      "description": "Brooks Ghost 14 smooth ride for runners.",
+      "price": 130.0
+    }
+  ]
+}
