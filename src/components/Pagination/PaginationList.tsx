@@ -29,12 +29,18 @@ const PaginationList = <T,>({
         <div>
             {backButton}
             <h2 className="text-xl font-semibold mb-4">{title}</h2>
-            {isLoading ? <p>Loading...</p> : <ul className="space-y-2">{items?.map(renderItem)}</ul>}
-            <PaginationControls
-                page={page}
-                setPage={setPage}
-                totalPages={totalPages}
-            />
+            {isLoading ? (
+                <p>Loading...</p>
+            ) : (
+                <>
+                    <ul className="space-y-2">{items?.map(renderItem)}</ul>
+                    <PaginationControls
+                        page={page}
+                        setPage={setPage}
+                        totalPages={totalPages}
+                    />
+                </>
+            )}
         </div>
     );
 };
