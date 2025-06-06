@@ -64,7 +64,7 @@ db.json # Mock backend data
 4. Start the mock backend with json-server:
    
     ```bash
-     npx json-server --watch db.json --port 3001
+    npm run server
    ```
     API endpoints will be available at:
    - http://localhost:3001/brands
