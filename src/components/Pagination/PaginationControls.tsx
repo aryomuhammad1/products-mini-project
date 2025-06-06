@@ -15,9 +15,10 @@ const PaginationControls = ({ page, setPage, totalPages }: PaginationControlsPro
                 Prev
             </button>
             <div className="flex gap-4 px-3 py-1">
-                {pageNumbers.map((n) => {
+                {pageNumbers.map((n, i) => {
                     return (
                         <p
+                            key={i}
                             {...(page !== n ? { className: 'cursor-pointer' } : { className: 'text-gray-500' })}
                             onClick={() => setPage(n)}>
                             {n}
