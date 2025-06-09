@@ -88,7 +88,7 @@ Notes: ⚠️ We do not use a separate endpoint for item counts, though that’s
 
 **1. Jelaskan pemahaman Anda mengenai State Management dan sebutkan contoh
 nya? **  
-State Management adalah bagaimana cara sebuah aplikasih melacak dan mengelola state (data yang bisa berubah seiring berjalan nya waktu).
+State Management adalah bagaimana cara sebuah aplikasi melacak dan mengelola state (data yang bisa berubah seiring berjalan nya waktu).
 Implementasi State Management penting untuk memastikan UI merespon perubahan data dengan benar.
 Dalam Frontend Development, state mencakup hal-hal seperti :
 - Interaksi UI, seperti tombol yang membuka atau menutup modal.
@@ -100,9 +100,9 @@ Dalam Frontend Development, state mencakup hal-hal seperti :
 Contoh State Management Tools :
 - State Local
 1. useState, hook bawaan React yang digunakan untuk mengelola state sederhana dalam satu komponen.
-* Cara kerja :
-   useState menerima initial value sebagai parameter dan mengembalikan array berisi nilai state saat ini dan fungsi untuk mengubah state tersebut.
-* Contoh penggunaan :
+   * Cara kerja :
+      useState menerima initial value sebagai parameter dan mengembalikan array berisi nilai state saat ini dan fungsi untuk mengubah state tersebut.
+   * Contoh penggunaan :
 ```jsx
 function Counter() {
    const [count, setCount] = useState(0);
@@ -119,9 +119,9 @@ function Counter() {
 ```
 
 2. useReducer, mirip dengan useState namun digunakan untuk mengelola logika state yang lebih kompleks dalam komponen.
-* Cara kerja :
-   Menggunakan reducer function yang menerima state dan action kemudian mengembalikan state baru.
-* Contoh penggunaan :
+   * Cara kerja :
+      Menggunakan reducer function yang menerima state dan action kemudian mengembalikan state baru.
+   * Contoh penggunaan :
 ```jsx
 // 1. Buat reducer function
 function counterReducer(state, action) {
@@ -148,11 +148,51 @@ function Counter() {
 }
 ```  
   
-- State Global 
-1. Redux, state management populer yang digunakan untuk menyimpan seluruh state aplikasi di dalam satu store global.
-* Cara kerja :
-   Menggunakan store, actions dan reducers. State hanya bisa diubah dengan cara memanggil dispatch(action)
-* Contoh penggunaan :
+- State Global
+1. useContext, digunakan untuk mengelola state global antar komponen tanpa perlu melakukan prop drilling (passing props dari parent ke child terus menerus hingga komponen tujuan).
+   * Cara kerja : Membagikan state global melalui Provider, lalu diakses dengan useContext().
+   * Contoh penggunaan :
+```jsx
+import React, { createContext, useContext, useState } from 'react';
+
+// 1. Buat context
+const CountContext = createContext();
+
+function CounterProvider({ children }) {
+  const [count, setCount] = useState(0);
+  return (
+    <CountContext.Provider value={{ count, setCount }}>
+      {children}
+    </CountContext.Provider>
+  );
+}
+
+// 2. Gunakan context di komponen lain
+function CounterDisplay() {
+  const { count } = useContext(CountContext);
+  return <p>Count: {count}</p>;
+}
+
+function CounterButton() {
+  const { setCount } = useContext(CountContext);
+  return <button onClick={() => setCount(prev => prev + 1)}>Tambah</button>;
+}
+
+// 3. Bungkus App komponen dengan provider
+function App() {
+  return (
+    <CounterProvider>
+      <CounterDisplay />
+      <CounterButton />
+    </CounterProvider>
+  );
+}
+
+```
+2. Redux, state management populer yang digunakan untuk menyimpan seluruh state aplikasi di dalam satu store global.
+   * Cara kerja :
+      Menggunakan store, actions dan reducers. State hanya bisa diubah dengan cara memanggil dispatch(action)
+   * Contoh penggunaan :
 ```jsx
 import React from 'react';
 import { createStore } from 'redux';
