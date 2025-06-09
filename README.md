@@ -33,14 +33,16 @@ This project displays a list of brands and their products, with pagination imple
 
 ## Project Structure (Simplified)
 
-src/
-├── api/ # Axios client and API helper functions
-├── components/ # Reusable UI components (PaginationList, Layout, etc)
-├── hooks/ # Custom React Query hooks (useBrands, useProducts, etc)
-├── pages/ # Page components (BrandsPage, ProductsPage, ProductDetailPage)
-├── App.tsx # Main app component with routing
-└── index.tsx # React entry point
-db.json # Mock backend data
+```
+   src/
+   ├── api/ # Axios client and API helper functions
+   ├── components/ # Reusable UI components (PaginationList, Layout, etc)
+   ├── hooks/ # Custom React Query hooks (useBrands, useProducts, etc)
+   ├── pages/ # Page components (BrandsPage, ProductsPage, ProductDetailPage)
+   ├── App.tsx # Main app component with routing
+   └── index.tsx # React entry point
+   db.json # Mock backend data
+```
 
 
 
